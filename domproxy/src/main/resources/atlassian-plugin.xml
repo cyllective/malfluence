@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/cyllective-logo.png</param>  
+    <param name="plugin-logo">images/cyllective-logo.png</param> 
+  </plugin-info>
+  <resource type="i18n" name="i18n" location="${atlassian.plugin.key}"/>
+
+  <rest name="Jobs REST API" key="jobs-rest-api" path="/jobs" version="1.0">The jobs REST API</rest>
+
+  <web-resource name="dom-proxy-js" key="dom-proxy">
+    <resource type="download" name="dom-proxy.js" location="/js/dom-proxy.js"/>  
+    <context>atl.general</context> 
+  </web-resource>
+</atlassian-plugin>

